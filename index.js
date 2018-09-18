@@ -1,13 +1,8 @@
-'use strict'
+const express = require('express');
+const app = express();
 
-let mysql = require('mysql');
-let connection;
+app.use(express.static(__dirname + '/public'));
 
-connection = mysql.createConnetion({
-  host : '10.10.1.86',
-  user : 'raduser',
-  password : 'r@dus3r.208',
-  database : 'radius'
-});
-
-connection.conect()
+app.listen(3000,() => {
+  console.log("Escuchando en el puerto 3000...");
+})
