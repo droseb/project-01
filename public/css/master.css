@@ -12,7 +12,6 @@ body {
                        "sign_in sign_in"
                        "about_us about_us";
   background: white;
-  border-radius: 11px;
   /* grid-gap: 5px; */
 
   /* justify-items: start end center stretch; */
@@ -29,28 +28,37 @@ body {
   grid-area: img2;
   display: block;
   margin-right: auto;
-  border-radius: 15px;
 }
 .img{
   grid-area: img;
   display: block;
   margin-left:  auto;
 }
+
 .sign_in{
+  display: grid;
   grid-area: sign_in;
+  align-content: center;
+  justify-content: center;
   color: white;
 }
+/* .sign_in hr{
+  display: grid;
+  color: black;
+  width: 800px;
+} */
 .form{
   text-align: center;
-  background: #99c96e;
+  background: #74b500;
   padding: 1.5em;
+  width: 500px;
   border-radius: 10px;
 }
 .form input{
   width: 51%;
   padding: 10px;
   font-size: 200px
-  border: 5px solid #dbdbe2;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 .about_us{
