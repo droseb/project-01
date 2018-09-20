@@ -6,13 +6,13 @@ body {
 }
 .container{
   display: grid;
-  grid-template: 200px 1fr 100px / repeat(2, minmax(100px, 1fr));  /* fr es un espacio de medida */
+  grid-template: 200px 50px 1fr 100px / repeat(2, minmax(100px, 1fr));  /* fr es un espacio de medida */
   height: 100vh;
   grid-template-areas: "img2 img"
+                       "bienvenido bienvenido"
                        "sign_in sign_in"
                        "about_us about_us";
   background: white;
-  border-radius: 11px;
   /* grid-gap: 5px; */
 
   /* justify-items: start end center stretch; */
@@ -20,7 +20,7 @@ body {
   /* grid-column-gap: 5px;
   grid-row-gap: 0px;
   grid-gap: filas columnas
-  grid-template: filas / columnas */
+  grid-tem  plate: filas / columnas */
 }
 /* .item:nth-of-type(1) {
   background: blue;
@@ -29,30 +29,65 @@ body {
   grid-area: img2;
   display: block;
   margin-right: auto;
-  border-radius: 15px;
 }
 .img{
   grid-area: img;
   display: block;
   margin-left:  auto;
 }
+.bienvenido{
+  display: grid;              /*Tipo de display*/
+  width: auto;                /*Ancho del cuadro grid*/
+  align-content: center;      /*Aliena de arriba y abajo */
+  justify-content: center;    /*Alinear de derecha a izquierda*/
+  font-size: 15px;            /*Altura de la letra*/
+  grid-area: bienvenido;      /*Area del grid*/
+  height: auto;               /*Altura del cuadro del grid*/
+}
 .sign_in{
+  display: grid;
   grid-area: sign_in;
+  align-content: center;
+  justify-content: center;
   color: white;
 }
+/* .sign_in hr{
+  display: grid;
+  color: black;
+  width: 800px;
+} */
+
+/* Formulario */
 .form{
   text-align: center;
-  background: #99c96e;
-  padding: 1.5em;
-  border-radius: 10px;
+  background: #74b500;
+  /* padding: 1.5em; hancha mas el recuadro del form */
+  width: 500px;
+  border-radius: 10px;    /*Dar borde a los costados*/
 }
 .form input{
-  width: 51%;
+  width: 76%;
   padding: 10px;
   font-size: 200px
-  border: 5px solid #dbdbe2;
+  border-radius: 5px;
+  border: 1px solid black;
   box-sizing: border-box;
 }
+.form h2{
+  color: white;
+  margin-bottom: 1em;
+  font-size: 30px;
+}
+.form button{
+  width: auto;
+  border-radius: 3px;
+  background-position: center;
+}
 .about_us{
+  display: grid;
   grid-area: about_us;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  font-size: 11px
 }
