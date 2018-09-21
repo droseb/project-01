@@ -6,9 +6,9 @@ body {
 }
 .container{
   display: grid;
-  grid-template: 200px 50px 1fr 100px / repeat(2, minmax(100px, 1fr));  /* fr es un espacio de medida */
-  height: 100vh;
-  grid-template-areas: "img2 img"
+  grid-template: 150px 50px 1fr 200px / repeat(2, minmax(100px, 1fr));  /* fr es un espacio de medida */
+  height: 105vh;
+  grid-template-areas: "img img"
                        "bienvenido bienvenido"
                        "sign_in sign_in"
                        "about_us about_us";
@@ -25,24 +25,24 @@ body {
 /* .item:nth-of-type(1) {
   background: blue;
 } */
-.img2{
-  grid-area: img2;
-  display: block;
-  margin-right: auto;
-}
 .img{
+  align-content: center;
+  display: grid;
   grid-area: img;
-  display: block;
-  margin-left:  auto;
+  margin-top: 0px;
+
 }
 .bienvenido{
   display: grid;              /*Tipo de display*/
   width: auto;                /*Ancho del cuadro grid*/
+  color: white;               /*Color de la letra*/
+  border-radius: 10px;
   align-content: center;      /*Aliena de arriba y abajo */
   justify-content: center;    /*Alinear de derecha a izquierda*/
   font-size: 15px;            /*Altura de la letra*/
   grid-area: bienvenido;      /*Area del grid*/
   height: auto;               /*Altura del cuadro del grid*/
+  background:  #1c2833;       /*Fondo*/
 }
 .sign_in{
   display: grid;
@@ -50,6 +50,14 @@ body {
   align-content: center;
   justify-content: center;
   color: white;
+  background: #1c2833;
+  margin-right: 143px;
+  margin-left: 143px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  /* width: 510px;
+  height: 222px;  */
 }
 /* .sign_in hr{
   display: grid;
@@ -84,7 +92,13 @@ body {
   background-position: center;
 }
 .about_us{
+  background:  #1c2833;
   display: grid;
+  color: white;
+  border-radius: 10px;
+  margin: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
   grid-area: about_us;
   position: relative;
   align-content: center;
