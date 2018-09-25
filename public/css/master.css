@@ -1,6 +1,6 @@
 body {
   font-family: verdana;
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .container{
@@ -23,12 +23,19 @@ body {
 /* .item:nth-of-type(1) {
   background: blue;
 } */
-.img{
+.img {
   align-content: center;
+  flex-wrap: wrap;
   display: grid;
   grid-area: img;
   margin-top: 0px;
-
+  max-width: 800px;
+}
+.imagen{
+  max-width: 800px;
+  min-width: 300px;
+  height: 200px;
+  margin-left: 65px;
 }
 .bienvenido{
   display: grid;              /*Tipo de display*/
@@ -41,6 +48,7 @@ body {
   grid-area: bienvenido;      /*Area del grid*/
   margin-bottom: auto;
   background:  #171317;       /*Fondo*/
+  align: center;
 }
 .sign_in{
   display: grid;
@@ -48,15 +56,13 @@ body {
   align-content: center;
   justify-content: center;
   color: white;
-  background-color: #171317;
-  margin: 75px 148px;
-  border-radius: 10px
 }
 .form{
   text-align: center;
   background: #7bba51;
-  /* padding: 1.5em; hancha mas el recuadro del form */
-  width: 500px;
+  max-width: 436px;
+  height: 232.55px;
+  border: 2px solid black;
   border-radius: 10px;
 }
 .form input{
