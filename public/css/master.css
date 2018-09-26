@@ -5,7 +5,7 @@ body {
 }
 .container{
   display: grid;
-  grid-template: 120px 50px 1fr 150px / repeat(2, minmax(100px, 1fr));
+  grid-template: 120px 50px 400px 150px / repeat(2, minmax(100px, 1fr));
   height: 105vh;
   grid-template-areas: "img img"
                        "bienvenido bienvenido"
@@ -20,9 +20,6 @@ body {
   grid-gap: filas columnas
   grid-template: filas / columnas */
 }
-/* .item:nth-of-type(1) {
-  background: blue;
-} */
 .img {
   align-content: center;
   flex-wrap: wrap;
@@ -75,6 +72,7 @@ body {
 }
 .form p{
   font-size: 15px;
+  margin: 5px;
 }
 .form h2{
   color: white;
@@ -88,26 +86,38 @@ body {
   background:  #171317;
   display: grid;
   color: white;
-  width: 800px;
-  border-radius: 10px;
+  width: auto;
+  height: 140px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   grid-area: about_us;
   margin-top: auto;
   margin-bottom: auto;
 }
 .about_us hr{
+  position: sticky;
   margin-right: 200px;
-  width: 700px;
-  color: #7bba51;
+  min-width: 700px;
+  z-index: 0;
+  border: 1px solid #7bba51;
 }
 .about_us p{
   margin-left: 10px;
 }
 .about_us2 {
+  background:  #171317;
   display: grid;
   grid-area: about_us2;
+  max-width: 400px;
+  margin-top: auto;
+  height: 140px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: auto;
   align-content: center;
 }
 .about_us2 img{
-  width: 160px;
+  max-width: 160px;
   margin-left: 200px;
+  z-index: 1;
   }
