@@ -1,41 +1,136 @@
 body {
-  font-family: Arial;
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
-  colo
-}
+    font-family: verdana;
+  }
+
 .container{
   display: grid;
-  grid-template: 200px 1fr 100px / repeat(2, minmax(100px, 1fr));  /* fr es un espacio de medida */
-  height: 100vh;
-  grid-template-areas: "img2 img"
-                       "register register"
-                       "about_us about_us";
-  /* grid-gap: 5px; */
-
-  /* justify-items: start end center stretch; */
-  /* align-items: start end center stretch; */
-  /* grid-column-gap: 5px;
-  grid-row-gap: 0px;
-  grid-gap: filas columnas
-  grid-template: filas / columnas */
+    height: 105vh;
+    background: white;
+    grid-template: 120px 50px 400px 150px / repeat(2, minmax(100px, 1fr));
+    grid-template-areas:  "img img"
+                          "bienvenido bienvenido"
+                          "sign_in sign_in"
+                          "about_us about_us2";
+  }
+.img {
+  display: grid;
+    align-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin-top: 0px;
+    grid-area: img;
+  }
+.imagen{
+  min-width: 300px;
+    max-width: 800px;
+  height: 200px;
+  margin-left: 65px;
+  }
+.bienvenido{
+    display: grid;
+    text-align: center;
+  align-content: center;
+  justify-content: center;
+  width: auto;
+  margin-bottom: auto;
+  color: white;
+  border-radius: 10px;
+  background:  #171317;
+  font-size: 15px;
+  grid-area: bienvenido;
+  align: center;
+  }
+.sign_in{
+    display: grid;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  grid-area: sign_in;
+  }
+.form{
+  max-width: 470px;
+  max-height: 280px;
+    text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: #7bba51;
+  }
+.form input{
+  box-sizing: border-box;
+    width: 76%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15px;
+  }
+.form p{
+  margin: 5px;
+  }
+.form h2{
+  margin-bottom: 1em;
+    color: white;
+  font-size: 30px;
+  }
+.form a{
+  color: white;
+  transition: all 0.2s linear;
 }
-/* .item:nth-of-type(1) {
-  background: blue;
-} */
-.img2{
-  grid-area: img2;
-  display: block;
-  margin-right: auto;
+.boton {
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid white;
+  padding: 7px;
+  margin-top: 10px;
+  font-weight: 600;
+  background-color: #7bba51;
 }
-.img{
-  grid-area: img;
-  display: block;
-  margin-left:  auto;
+.boton:hover {
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid black;
+  text-decoration: none;
 }
-.register{
-  grid-area: register;
+.pag{
+  font-size: 12px;
 }
 .about_us{
+  display: grid;
+  width: auto;
+  height: 140px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+    background:  #171317;
   grid-area: about_us;
+  }
+.about_us hr{
+    position: sticky;
+  z-index: 0;
+  min-width: 700px;
+  margin-right: 200px;
+  border: 1px solid #7bba51;
+  }
+.about_us p{
+  margin-left: 10px;
 }
+.about_us2 {
+  display: grid;
+  align-content: center;
+  max-width: 400px;
+  height: 140px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+    background:  #171317;
+  grid-area: about_us2;
+  }
+.about_us2 img{
+  z-index: 1;
+    max-width: 160px;
+  margin-left: 200px;
+  }
