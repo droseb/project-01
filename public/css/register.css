@@ -8,84 +8,104 @@ body {
   display: grid;
     height: 105vh;
     background: white;
-    grid-template: 120px 50px 400px 150px / repeat(2, minmax(100px, 1fr));
+    grid-template: 140px 50px 400px 150px / repeat(2, minmax(100px, 1fr));
     grid-template-areas:  "img img"
                           "bienvenido bienvenido"
-                          "sign_in sign_in"
+                          "reggister reggister"
                           "about_us about_us2";
   }
 .img {
   display: grid;
-    align-content: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin-top: 0px;
-    grid-area: img;
+  align-content: center;
+  min-width: 400px;
+  max-width: 800px;
+    margin-top: 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #6eaa39;
+  grid-area: img;
   }
 .imagen{
-  min-width: 300px;
-    max-width: 800px;
-  height: 200px;
-  margin-left: 65px;
+  height: 139px;
+    margin: 0 auto;
   }
 .bienvenido{
     display: grid;
-    text-align: center;
   align-content: center;
-  justify-content: center;
   width: auto;
+  min-width: 400px;
+  height: 50px
+    justify-content: center;
   margin-bottom: auto;
+  text-align: center;
   color: white;
-  border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   background:  #171317;
   font-size: 15px;
   grid-area: bienvenido;
-  align: center;
-  }
-.sign_in{
+    }
+.register{
     display: grid;
   align-content: center;
   justify-content: center;
   color: white;
-  grid-area: sign_in;
+  grid-area: reggister;
   }
 .form{
-  max-width: 470px;
-  max-height: 280px;
-    text-align: center;
+  max-width: 500px;
+  min-width: auto;
+  height: 350px;
   border: 2px solid black;
   border-radius: 10px;
-  background: #7bba51;
+  background: #6eaa39;
   }
 .form input{
   box-sizing: border-box;
-    width: 76%;
+    width: 300px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
   font-size: 15px;
   }
-.form p{
-  margin: 5px;
-  }
+.form p strong{
+  margin-left: 2px;
+  margin-right: 12px;
+}
+.sex{
+  margin-left: 2px;
+  margin-right: 40px;
+}
+.sexo{
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.edad{
+  margin-left: 2px;
+  margin-right: 39px;
+}
 .form h2{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
   margin-bottom: 1em;
-    color: white;
-  font-size: 30px;
+  font-size: 25px;
   }
 .form a{
   color: white;
   transition: all 0.2s linear;
 }
 .boton {
-  text-decoration: none;
-  border-radius: 6px;
-  border: 2px solid white;
   padding: 7px;
-  margin-top: 10px;
+    text-decoration: none;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: #6eaa39;
   font-weight: 600;
-  background-color: #7bba51;
-}
+  }
 .boton:hover {
   color: black;
   background-color: #ffffff;
@@ -95,9 +115,15 @@ body {
 .pag{
   font-size: 12px;
 }
+.registrar{
+  text-align: center;
+  margin-top: 30px;
+  }
 .about_us{
+  z-index: 2;
   display: grid;
-  width: auto;
+  min-width: 200px;
+  max-width: 100%;
   height: 140px;
   margin-top: auto;
   margin-bottom: auto;
@@ -110,17 +136,20 @@ body {
 .about_us hr{
     position: sticky;
   z-index: 0;
-  min-width: 700px;
+  width: 399px;
   margin-right: 200px;
   border: 1px solid #7bba51;
   }
 .about_us p{
   margin-left: 10px;
+  max-width: 100%;
+  min-width: 200px;
 }
 .about_us2 {
   display: grid;
   align-content: center;
-  max-width: 400px;
+  max-width: 100%;
+  min-width: 200px;
   height: 140px;
   margin-top: auto;
   margin-bottom: auto;
@@ -130,7 +159,10 @@ body {
   grid-area: about_us2;
   }
 .about_us2 img{
-  z-index: 1;
+  z-index: 3;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 30%;
+  display: block;
     max-width: 160px;
-  margin-left: 200px;
   }
